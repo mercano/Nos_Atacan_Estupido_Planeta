@@ -139,3 +139,33 @@ KgeLkwHj3e3DfuW70L8RB/YknLBJim5aRwMZFTkVgpfzG1WqFrevhfXO08W5P5P/
 6HaZ7PHy1mKN4D2tHQ==
 =4Ct9
 -----END PGP MESSAGE-----
+
+
+
+
+
+
+______________________________________________SQL:Planeta:target4.txt.asc:SQL__________________________________________________
+
+
+-----BEGIN PGP MESSAGE-----
+
+jA0EBwMC+SCpBePDlgXW0ukBZRK/s+0VVaNLv4/Jw9lHrFSf2EYl27arv+b+99gH
+94Xuil1vmx7N2rwG28oSo5LuhBjAJQvryaTXHfgSicjpqaihaRNLBAvK+WGcx+66
+PItyaDQiaCgGOD01hSjcKU5LKknoIhiNpEWUNBG1uzdwiv4SvsTqj5xnXfnZte1G
+NSrZrpPvhveCg/PhrWwN2dPT5Fr2TkkQlq0c3cV7wfJACRW3yELE7yC0kAkx89DO
+N2kjXVhFH3sMw7x5/cwMHjhWIg2RjOJw1xIXM3oPLYHnLYbZF6k6ODt0D16sMXz8
+B4hm+oV3zs+K/2/euPau0Eto7/xJKDbr0dia/xjsQQzwJWlvPSR12VxZUUcLHOqo
+us5EsTgUw/nZ8K0vnIFSQUpMb/e9UbLQk9QM2cZap49vUHvFgcpSx7g/8Pq0lYCp
+orO1PtjmaEtYMgYcAfQvGuDeEn+Np8cOHCHdlHpuf8mmJQrTaqN8DdTc8cTZi5XW
+fRgLJuJsJQIDd7Elc+MiqYXyYjXrd9gwwc7GOhr5cPcEq0/VhH56NztaWHnl8yUx
+9vdp5IDXrLIT8M4VfeeWtNs6MWBaq0nrHxoUwfaFontjAXkobvzygh/rubPuEMkB
+7+r/6eD7GCMhykntrcuk3YnFewOQjvo8qAozoXCcHjx4J9wLsMcQwz5apPfTtDLp
+eJ3xVQPBbv3ODjVuy/5+MULnh/1ba8OYEJWNsY0CQH/tA/P6M9NPIji1sLCVmuk8
+HPqDkHKLhYF6g7ZVrCTrlTcf/b8vXOK8ltBYkTiXwQtH0zbOg+khd4LTCGeBHA8p
+knPnYsf9QubQdv1yWjyU5VK59h/LiDl2V4ovj3XbGcve8K3q1OTKbbBFadddQs/o
+Cy8vO6x9TAeR+AixUXBf
+=fgwZ
+-----END PGP MESSAGE-----
+
+
