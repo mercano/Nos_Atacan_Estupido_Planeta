@@ -1,5 +1,19 @@
 # Nos_Atacan_Estupido_Planeta
 
+
+Please_Call_Me: You know they are EVIL
+
+-----BEGIN PGP MESSAGE-----
+
+jA0ECQMC3o8yFzu2SAH/0qkBZ4kppM90ysNna07WmchQbNjE1cpC6bzudB/aLocm
+zPnKqWh29EgCD5Z4ceapy3bsoLQ1oAvsy2JTxqSH3Q9OXSVW5nSG//THTgYOXwdI
+LKijDDmVp69KozkQnjQjZyOkEEdhHtt3247Q9vZDLlAug+0pJCcmhaselYOCZgYw
+GRjkVYyVD4Zw/7qgwVHZcmxw6jsEpThGTEpX1083fryGu2xzIyQbvZQz
+=EqZR
+-----END PGP MESSAGE-----
+
+
+
 ___________________________________________SQL:Planeta:target1.txt.asc:SQL___________________________________________________
 
 -----BEGIN PGP MESSAGE-----
