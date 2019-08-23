@@ -1,0 +1,68 @@
+Inside the LAN:
+Scan with SADP (utilidad propietaria de Hikvision) && Detect todas las IP pertenecientes a Hikvision (Do a Excel)
+Scan for open ports: -sV & Fast google Search
+                    
+Port 554   open (-sV Hikvision 7513 POE IP Camera rstpd) (Google= RTSP Port used to stream video across the Network)
+Port 80    open (-sV Hikvision IP Camera httpd) (Google= DVR Web Interface)
+Port 8000  open (-sV 'nothing') (Send Commands to SVR)
+Port 49152 open (-sV Portable SDK For UPNP Devices) 
+                     
+Accessing Web Interface: Necesitamos usuario y contraseña: (a través de su interface Web solo se permiten 6 intentos de LOGIN)
+
+En la URL 192.168.1.150/doc/page/login.asp?_LinuxTimestamp
+  -Con Burpsuite podemos leer el siguiente GET: GET /ISAPI/Security/userCheck?timestamp='timestamp'
+                                           RESPONSE: HTTP/1.1 401 Unauthorized
+
+-From 'Herramientas de Desarrollo' en el Navegador Web:___
+                                                         |
+                                                         |CONSOLE: VM3049:1 GET http://Admin:12345678@192.168.1.150/ISAPI/Security/userCheck?timeStamp=1566570291376 401 (Unauthorized)
+                                                         //Al probar ingresar un usuario 'admin' con pass '123456'
+                                                         //Bruteforce con Python Script ??
+                                                         |	XMLHttpRequest.send	@	VM3049:1
+                                                         |send	@	jquery-1.7.2.min.js:4
+                                                         |ajax	@	jquery-1.7.2.min.js:4
+                                                         |WebSDK.jqueryAjaxClient.submitRequest	@	websdk.js?version=V4.0.1build170117:2
+                                                         |_submitRequest	@	websdk.js?version=V4.0.1build170117:2
+                                                         |WebSDK.WSDK_Login	@	websdk.js?version=V4.0.1build170117:2                                                                                                
+                                                         |doLogin	@	login.js?version=V4.0.1build170117:1
+                                                         |$scope.docPress	@	login.js?version=V4.0.1build170117:1
+                                                         |(anonymous)	@	angular-1.2.0.min.js…4.0.1build170117:90
+                                                         |(anonymous)	@	angular-1.2.0.min.js….0.1build170117:160
+                                                         |$eval	@	angular-1.2.0.min.js….0.1build170117:104
+                                                         |$apply	@	angular-1.2.0.min.js….0.1build170117:105
+                                                         |(anonymous)	@	angular-1.2.0.min.js….0.1build170117:160
+                                                         |dispatch	@	jquery-1.7.2.min.js:3
+                                                         |i	@	jquery-1.7.2.min.js:3
+
+Leyendo el código fuente de http://192.168.1.150/doc/script/isapi/websdk.js?version=V4.0.1build170117
+Encontramos lo siguiente:
+
+req:[PARAM_OPTION_INTERFACE]},
+PPPoEInfo:{url:"%s%s:%s/ISAPI/System/Network/PPPoE/1"},
+PPPoEStatus:{url:"%s%s:%s/ISAPI/System/Network/PPPoE/1/status"},
+ddnsCapa:{url:"%s%s:%s/ISAPI/System/Network/DDNS/capabilities"},
+ddnsInfo:{url:"%s%s:%s/ISAPI/System/Network/DDNS/1"},
+ddnsCountry:{url:"%s%s:%s/ISAPI/System/Network/DDNS/CountryID/capabilities"},
+email:{url:"%s%s:%s/ISAPI/System/Network/mailing"},
+emailCap:{url:"%s%s:%s/ISAPI/System/Network/mailing/capabilities"},
+snmp:{url:"%s%s:%s/ISAPI/System/Network/SNMP"},
+portInfo:{url:"%s%s:%s/ISAPI/Security/adminAccesses"},
+ftpCapa:{url:"%s%s:%s/ISAPI/System/Network/ftp/capabilities"},
+ftpEvent:{url:"%s%s:%s/ISAPI/Event/notification/ftp"},
+ftpInfo:{url:"%s%s:%s/ISAPI/System/Network/ftp"},
+upnp:{url:"%s%s:%s/ISAPI/System/Network/UPnP"},
+upnpStatus:{url:"%s%s:%s/ISAPI/System/Network/UPnP/ports/status"},
+alarmCenter:{url:"%s%s:%s/ISAPI/Event/notification/alarmCenter/1"},
+telnet:{url:"%s%s:%s/ISAPI/System/Network/telnetd"},
+cfg28181:{url:"%s%s:%s/ISAPI/System/Network/SIP"},
+sip28181Cap:{url:"%s%s:%s/ISAPI/System/Network/SIP/1/capabilities"},
+sip28181:{url:"%s%s:%s/ISAPI/System/Network/SIP/1/SIPInfo"},
+dial:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/dial"},
+dialstatus:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/dialstatus"},
+dialCap:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/dial/capabilities"},
+dialSchedule:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/schedule"},
+dialConnect:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/connect"},
+messageConfigCap:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/messageConfig/messageConfigCap"},
+messageConfig:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/messageConfig"},
+message:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/messages/%s"
+
