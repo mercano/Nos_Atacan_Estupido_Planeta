@@ -64,5 +64,5 @@ dialSchedule:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/schedu
 dialConnect:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/connect"},
 messageConfigCap:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/messageConfig/messageConfigCap"},
 messageConfig:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/messageConfig"},
-message:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/messages/%s"
+message:{url:"%s%s:%s/ISAPI/System/Network/WirelessDial/Interfaces/1/messages/%s" 
 
